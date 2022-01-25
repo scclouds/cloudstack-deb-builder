@@ -31,7 +31,7 @@ define build_tag
 endef
 
 .PHONY: all
-all: ubuntu1404 ubuntu1604 ubuntu1804 ubuntu1804-jdk11 latest
+all: ubuntu1404 ubuntu1604 ubuntu1804 ubuntu1804-jdk11
 
 .PHONY: ubuntu1404
 ubuntu1404: ## Build ubuntu1404 image
@@ -52,11 +52,6 @@ ubuntu1804: ## Build ubuntu1804 image
 ubuntu1804-jdk11: ## Build ubuntu1804-jdk11 image
 	@ $(MAKE) --no-print-directory log-$@
 	$(call build_tag,ubuntu1804-jdk11,ubuntu1804-jdk11)
-
-.PHONY: latest
-latest: ## Build latest image
-	@ $(MAKE) --no-print-directory log-$@
-	$(call build_tag,latest,ubuntu1804)
 
 .PHONY: push
 push: DOCKER_TAG ?=
