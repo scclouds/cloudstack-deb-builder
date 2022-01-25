@@ -3,7 +3,7 @@
 # CloudStack DEB Package builder using Docker
 
 [![Build Status](https://github.com/scclouds/cloudstack-deb-builder/workflows/ci/badge.svg)](https://github.com/scclouds/cloudstack-deb-builder/actions)
-[![Docker Pulls](https://img.shields.io/docker/pulls/scclouds/cloudstack-rpm-builder.svg)](https://store.docker.com/community/images/scclouds/cloudstack-rpm-builder)
+[![Docker Pulls](https://img.shields.io/docker/pulls/scclouds/cloudstack-deb-builder.svg)](https://store.docker.com/community/images/scclouds/cloudstack-deb-builder)
 [![license](https://img.shields.io/github/license/scclouds/cloudstack-deb-builder.svg)](https://github.com/scclouds/cloudstack-deb-builder/blob/master/LICENSE)
 
 Docker images for building Apache CloudStack DEB packages.
