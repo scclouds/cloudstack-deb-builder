@@ -1,7 +1,8 @@
 # CloudStack DEB Package builder using Docker
 
-[![Build Status](https://github.com/khos2ow/cloudstack-deb-builder/workflows/ci/badge.svg)](https://github.com/khos2ow/cloudstack-deb-builder/actions)
-[![license](https://img.shields.io/github/license/khos2ow/cloudstack-deb-builder.svg)](https://github.com/khos2ow/cloudstack-deb-builder/blob/master/LICENSE)
+[![Build Status](https://github.com/scclouds/cloudstack-deb-builder/workflows/ci/badge.svg)](https://github.com/scclouds/cloudstack-deb-builder/actions)
+[![Docker Pulls](https://img.shields.io/docker/pulls/scclouds/cloudstack-rpm-builder.svg)](https://store.docker.com/community/images/scclouds/cloudstack-rpm-builder)
+[![license](https://img.shields.io/github/license/scclouds/cloudstack-deb-builder.svg)](https://github.com/scclouds/cloudstack-deb-builder/blob/master/LICENSE)
 
 Docker images for building Apache CloudStack DEB packages.
 
@@ -61,7 +62,7 @@ Let's assume we want to build packages for Ubuntu 16.04 (Xenial). We pull that
 image first:
 
 ```bashe
-docker pull khos2ow/cloudstack-deb-builder:ubuntu1604
+docker pull scclouds/cloudstack-deb-builder:ubuntu1604
 ```
 
 You can replace `ubuntu1604` tag by `ubuntu1804`, `ubuntu1404` or `latest` if
@@ -92,7 +93,7 @@ always expects the `cloudstack` code exists in `/mnt/build` path.)
 ```bash
 docker run \
     -v /tmp:/mnt/build \
-    khos2ow/cloudstack-deb-builder:ubuntu1604 [ARGS...]
+    scclouds/cloudstack-deb-builder:ubuntu1604 [ARGS...]
 ```
 
 Or if your local cloudstack folder has other name, you need to map it to
@@ -101,7 +102,7 @@ Or if your local cloudstack folder has other name, you need to map it to
 ```bash
 docker run \
     -v /tmp/cloudstack-custom-name:/mnt/build/cloudstack \
-    khos2ow/cloudstack-deb-builder:ubuntu1604 [ARGS...]
+    scclouds/cloudstack-deb-builder:ubuntu1604 [ARGS...]
 ```
 
 After the build has finished the `.deb` packages are available in
@@ -125,7 +126,7 @@ in `/mnt/build/cloudstack` inside the container and can be accessed from
 ```bash
 docker run \
     -v /tmp:/mnt/build \
-    khos2ow/cloudstack-deb-builder:ubuntu1604 \
+    scclouds/cloudstack-deb-builder:ubuntu1604 \
         --git-remote https://github.com/apache/cloudstack.git \
         --git-ref master \
         [ARGS...]
@@ -155,7 +156,7 @@ it run faster.
 docker run \
     -v /tmp:/mnt/build \
     -v ~/.m2:/root/.m2 \
-    khos2ow/cloudstack-deb-builder:ubuntu1604 [ARGS...]
+    scclouds/cloudstack-deb-builder:ubuntu1604 [ARGS...]
 ```
 
 ### Adjust host owner permission
@@ -175,7 +176,7 @@ docker run \
     -v /tmp:/mnt/build \
     -e "USER_ID=$(id -u)" \
     -e "USER_GID=$(id -g)" \
-    khos2ow/cloudstack-deb-builder:ubuntu1604 [ARGS...]
+    scclouds/cloudstack-deb-builder:ubuntu1604 [ARGS...]
 ```
 
 ## Builder help
@@ -185,7 +186,7 @@ To see all the available options you can pass to `docker run ...` command:
 ```bash
 docker run \
     -v /tmp:/mnt/build \
-    khos2ow/cloudstack-deb-builder:ubuntu1604 --help
+    scclouds/cloudstack-deb-builder:ubuntu1604 --help
 ```
 
 ## License
@@ -194,9 +195,9 @@ Licensed under [Apache License version 2.0]. Please see the [LICENSE] file
 included in the root directory of the source tree for extended license details.
 
 [Apache License version 2.0]: http://www.apache.org/licenses/LICENSE-2.0
-[LICENSE]: https://github.com/khos2ow/cloudstack-deb-builder/blob/master/LICENSE
-[latest-dockerfile]: https://github.com/khos2ow/cloudstack-deb-builder/blob/master/ubuntu1804/Dockerfile
-[ubuntu1404-dockerfile]: https://github.com/khos2ow/cloudstack-deb-builder/blob/master/ubuntu1404/Dockerfile
-[ubuntu1604-dockerfile]: https://github.com/khos2ow/cloudstack-deb-builder/blob/master/ubuntu1604/Dockerfile
-[ubuntu1804-jdk11-dockerfile]: https://github.com/khos2ow/cloudstack-deb-builder/blob/master/ubuntu1804-jdk11/Dockerfile
+[LICENSE]: https://github.com/scclouds/cloudstack-deb-builder/blob/master/LICENSE
+[latest-dockerfile]: https://github.com/scclouds/cloudstack-deb-builder/blob/master/ubuntu1804/Dockerfile
+[ubuntu1404-dockerfile]: https://github.com/scclouds/cloudstack-deb-builder/blob/master/ubuntu1404/Dockerfile
+[ubuntu1604-dockerfile]: https://github.com/scclouds/cloudstack-deb-builder/blob/master/ubuntu1604/Dockerfile
+[ubuntu1804-jdk11-dockerfile]: https://github.com/scclouds/cloudstack-deb-builder/blob/master/ubuntu1804-jdk11/Dockerfile
 [https://github.com/apache/cloudstack]: https://github.com/apache/cloudstack
