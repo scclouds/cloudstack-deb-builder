@@ -16,7 +16,7 @@
 # under the License.
 
 FROM ubuntu:14.04
-LABEL maintainer="Khosrow Moossavi <me@khosrow.io> (@khos2ow)"
+LABEL maintainer="SC Clouds <contato@scclouds.com.br> (@scclouds)"
 
 RUN apt-get update -y && \
     apt-get install -y --no-install-recommends software-properties-common && \
