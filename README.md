@@ -30,8 +30,8 @@ for releases. A very good candidate to be used by the Jenkins slaves of the proj
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`latest`, `ubuntu1804` (ubuntu1804/Dockerfile)][latest-dockerfile]
 - [`ubuntu1804-jdk11` (ubuntu1804-jdk11/Dockerfile)][ubuntu1804-jdk11-dockerfile]
+- [`ubuntu1804` (ubuntu1804/Dockerfile)][ubuntu1804-dockerfile]
 - [`ubuntu1604` (ubuntu1604/Dockerfile)][ubuntu1604-dockerfile]
 - [`ubuntu1404` (ubuntu1404/Dockerfile)][ubuntu1404-dockerfile]
 
