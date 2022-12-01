@@ -53,6 +53,11 @@ ubuntu1804-jdk11: ## Build ubuntu1804-jdk11 image
 	@ $(MAKE) --no-print-directory log-$@
 	$(call build_tag,ubuntu1804-jdk11,ubuntu1804-jdk11)
 
+.PHONY: ubuntu2004-jdk11-python3
+ubuntu1804-jdk11: ## Build ubuntu1804-jdk11 image
+	@ $(MAKE) --no-print-directory log-$@
+	$(call build_tag,ubuntu2004-jdk11-python3,ubuntu2004-jdk11-python3)
+
 .PHONY: push
 push: DOCKER_TAG ?=
 push: ## Push image
