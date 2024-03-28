@@ -14,7 +14,7 @@ for releases. A very good candidate to be used by the Jenkins slaves of the proj
 ## Table of Contents
 
 - [Supported tags and respective `Dockerfile` links](#supported-tags-and-respective-dockerfile-links)
-- [Packges installed in conatiner](#packges-installed-in-conatiner)
+- [Packages installed in container](#packages-installed-in-container)
 - [Build DEB packages](#build-deb-packages)
   - [Pull Docker images](#pull-docker-images)
   - [Build local repository](#build-local-repository)
@@ -30,12 +30,13 @@ for releases. A very good candidate to be used by the Jenkins slaves of the proj
 
 ## Supported tags and respective `Dockerfile` links
 
+- [`ubuntu2004-jdk11-python3` (ubuntu2004-jdk11-python3/Dockerfile)][ubuntu2004-jdk11-python3-dockerfile]
 - [`ubuntu1804-jdk11` (ubuntu1804-jdk11/Dockerfile)][ubuntu1804-jdk11-dockerfile]
 - [`ubuntu1804` (ubuntu1804/Dockerfile)](ubuntu1804-dockerfile)
 - [`ubuntu1604` (ubuntu1604/Dockerfile)][ubuntu1604-dockerfile]
 - [`ubuntu1404` (ubuntu1404/Dockerfile)][ubuntu1404-dockerfile]
 
-## Packges installed in conatiner
+## Packages installed in container
 
 List of available packages inside the container:
 
@@ -198,6 +199,7 @@ included in the root directory of the source tree for extended license details.
 
 [Apache License version 2.0]: http://www.apache.org/licenses/LICENSE-2.0
 [LICENSE]: https://github.com/scclouds/cloudstack-deb-builder/blob/master/LICENSE
+[ubuntu2004-jdk11-python3-dockerfile]: https://github.com/scclouds/cloudstack-deb-builder/blob/master/ubuntu2004-jdk11-python3/Dockerfile
 [ubuntu1804-jdk11-dockerfile]: https://github.com/scclouds/cloudstack-deb-builder/blob/master/ubuntu1804-jdk11/Dockerfile
 [ubuntu1804-jdk8-dockerfile]: https://github.com/scclouds/cloudstack-deb-builder/blob/master/ubuntu1804/Dockerfile
 [ubuntu1604-dockerfile]: https://github.com/scclouds/cloudstack-deb-builder/blob/master/ubuntu1604/Dockerfile
