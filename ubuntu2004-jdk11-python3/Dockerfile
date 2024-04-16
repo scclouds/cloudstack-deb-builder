@@ -42,6 +42,7 @@ RUN apt-get update -y && \
         python3-setuptools \
         python-setuptools \
         curl \
+        wget \
         sudo && \
     curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - && \
     apt-get install -y --no-install-recommends \
