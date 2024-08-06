@@ -31,7 +31,7 @@ define build_tag
 endef
 
 .PHONY: all
-all: ubuntu1404 ubuntu1604 ubuntu1804 ubuntu1804-jdk11
+all: ubuntu1404 ubuntu1604 ubuntu1804 ubuntu1804-jdk11 ubuntu2004-jdk11-python3
 
 .PHONY: ubuntu1404
 ubuntu1404: ## Build ubuntu1404 image
